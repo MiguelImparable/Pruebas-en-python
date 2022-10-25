@@ -27,11 +27,10 @@ def Exercise_6():
 
         return print(fib)
 
-    if __name__ == "__main__":
-        fibonacci(int(input("up to what value do you want to indent: ")))
-
+    fibonacci(int(input("up to what value do you want to indent: ")))
     print("\nEnd of program\n")
 
 
 if __name__ == "__main__":
     Exercise_6()
+    

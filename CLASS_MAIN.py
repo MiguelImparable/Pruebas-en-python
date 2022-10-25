@@ -22,6 +22,8 @@ from Ejercicio21 import Exercise_21
 from Ejercicio22 import Exercise_22
 from Ejercicio23 import Exercise_23
 from Ejercicio24 import Exercise_24
+from Ejercicio25 import Exercise_25
+
 
 import os
 
@@ -72,6 +74,16 @@ def main():
             Exercise_19()
         if Exc == 20:
             Exercise_20()
+        if Exc == 21:
+            Exercise_21()
+        if Exc == 22:
+            Exercise_22()
+        if Exc == 23:
+            Exercise_23()
+        if Exc == 24:
+            Exercise_24()
+        if Exc == 25:
+            Exercise_25()
 
     else:
         print("\nEnd of program\n")
