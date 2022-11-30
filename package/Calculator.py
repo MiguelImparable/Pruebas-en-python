@@ -1,3 +1,6 @@
+import os
+
+
 class Calculadora:
     def __init__(self, numero):  # Importante siempre generar el constructor
         self.n = numero
@@ -43,7 +46,10 @@ class raiz(Calculadora):
         print("El resultado es: ", math.sqrt(a))
 
 
-def Exercise_26():
+def Calculator():
+    os.system("cls")
+    print("\nExercise for calculator")
+
     Ejemplo = Operaciones_Basicas()
     print(Ejemplo.ingresar_dato())
     print(Ejemplo.resta())
@@ -52,4 +58,4 @@ def Exercise_26():
 
 
 if __name__ == "__main__":
-    Exercise_26()
+    Calculator()

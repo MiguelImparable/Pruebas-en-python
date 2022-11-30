@@ -1,8 +1,12 @@
 import random
 import numpy as np
+import os
 
 
-def Exercise_25():
+def Example_competition():
+    os.system("cls")
+    print("\nExercise for competition")
+
     while True:
         try:
             Calles = int(input("Introduce el numero de calles: "))
@@ -11,7 +15,7 @@ def Exercise_25():
             nvechiculos = int(input("Introduce el numero de Vehiculos: "))
         except ValueError:
             print("Copiaste una letra, vuelve a intentarlo")
-            return Exercise_25()
+            return Example_competition()
 
         else:
             x1 = list(range(Calles))
@@ -117,6 +121,6 @@ def Exercise_25():
 
 
 if __name__ == "__main__":
-    Exercise_25()
+    Example_competition()
 
 """MEJORAR LOS RANDOM, REALIZAR EL PROCESO CON POO, ALISTAR CON BASE DE DATOS MYSQL, INTERFASE GRAFICA"""

@@ -1,18 +1,17 @@
+# Un programa que asigne una contraseña con ciertas caracteristicas:
+# Que tengas mayus, minus, caracteres especiales, numeros con maximo 3 intentos.
 import os
 import string
-
-# Un programa que asigne una contraseña con ciertas caracteristicas: 
-# Que tengas mayus, minus, caracteres especiales, numeros con maximo 3 intentos.
 
 
 def Example_password():
     os.system("cls")
     print("\nExercise for Example password")
 
-    mayus = string.ascii_uppercase # Mayus List
-    minus = string.ascii_lowercase # Minus List
-    num = string.octdigits # Numbers
-    esp = string.punctuation # Specials Cases
+    mayus = string.ascii_uppercase  # Mayus List
+    minus = string.ascii_lowercase  # Minus List
+    num = string.octdigits  # Numbers
+    esp = string.punctuation  # Specials Cases
     password = None
     picking_out = True
     Attempts = 0

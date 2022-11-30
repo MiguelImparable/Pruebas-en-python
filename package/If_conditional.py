@@ -1,10 +1,9 @@
-import os
-
 # Un programa para una empresa de su sistema vacacional con las siguientes caracteristicas:
 # 3 departamentos: Atencion al cliente (clave1),Logistica (clave2),Gerencia (clave3)
 # (clave1): 1 año serv,  6 dias de V./ 2-6 años serv, 14 dias de V./ 7 años en adelante, 20 dias de V.
 # (clave2): 1 año serv,  7 dias de V./ 2-6 años serv, 15 dias de V./ 7 años en adelante, 22 dias de V.
 # (clave3): 1 año serv, 10 dias de V./ 2-6 años serv, 20 dias de V./ 7 años en adelante, 30 dias de V.
+import os
 
 
 def If_conditional():

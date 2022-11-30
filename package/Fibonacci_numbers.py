@@ -1,6 +1,6 @@
+# Un programa que imprima en pantalla la sucesion de fibonacci preguntando
+# el valor maximo al usuario.
 import os
-
-# Un programa que imprima en pantalla la sucesion de fibonacci preguntando el valor maximo al usuario.
 
 
 def Fibonacci_numbers():
@@ -33,4 +33,3 @@ def Fibonacci_numbers():
 
 if __name__ == "__main__":
     Fibonacci_numbers()
-    

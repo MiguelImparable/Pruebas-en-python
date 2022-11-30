@@ -1,17 +1,16 @@
-import os
+# Archivos mas comunes DataFrame o formato tabla:
+# 1. CSV - Comma Separated Values
+# 2. TSV - Tab Separated Values
+# 3. XLSX - Excel
+# Pandas series, son arrays np que son cada una de las columnas con su propio indice y titulo
 import pandas as pd
+import numpy as np
+import os
 
-# Un programa que me permita practicas en PDS y los DF
 
-
-def Exercise_24():
+def Document_handling():
     os.system("cls")
-    print("\nExercise No.24")
-    # Archivos mas comunes DataFrame o formato tabla:
-    # 1. CSV - Comma Separated Values
-    # 2. TSV - Tab Separated Values
-    # 3. XLSX - Excel
-    # Pandas series, son arrays np que son cada una de las columnas con su propio indice y titulo
+    print("\nExercise for document handling")
 
     # Creando un DataFrame desde cero (diccionario)
     datos = {"nombre": ["SFDX Show", "Sara Nogark", "Nate Gentile", "Bettatech", "Antonio Sarosi", "Edgar Pons", "S4vitar"],
@@ -47,7 +46,7 @@ def Exercise_24():
     # retorna solo la condicion
     df[df["nombre"] == "Nate Gentile"]["especialidad"]
 
-    # Buscar elementos integer location
+    # Buscar elementos (integer location)
     # no. fila, no. columna (los dos puntos generan rangos en ambas posiciones)
     df.iloc[2, 0:2]
 
@@ -56,8 +55,36 @@ def Exercise_24():
     # rangos vacios son valores iniciales o finales depende del uso
     df.loc[2, "especialidad":]
 
-    print("\nEnd of program\n")
+    # Manipulacion de datos con pandas
+    # Debe tener el mismo tamaño del DataFrame, lo recomendado es que se cree un nuevo DF, modifica el indice al valor asignado
+    df_nuevo = df.set_index("nombre")
+    df.set_index("nombre", inplace=True)  # modifica el indice en el mismo DF
+    # retorna al valor inicial numerico del indice
+    df.reset_index(inplace=True)
+    df_nuevo.loc[["Nate Gentile", "S4vitar"], "visitas"]
+    # Upper para poner el texto en mayus y lamda para aplicar cualquier funcion en cada uno de los elementos
+    df["especialidad"].apply(lambda x: x.upper())
+
+    # FUNCIONES AVANZADAS
+    df_nuevo = df.copy()
+    # Concatenar DFs y reiniciar el indice
+    pd.concat([df, df_nuevo]).reset_index(drop=True)
+    # busca los valores y el resto los elimina
+    filtro1 = df.where(df["especialidad"] == "Programación")
+    filtro2 = df.where(df["visitas"] > 145000)
+    df.where(filtro1 & filtro2).dropna()
+    df.groupby("especialidad").sum()
+    df.groupby("sexo").max()
+    pd.pivot_table(df, index=['sexo'], values=['nombre'],
+                   columns=['especialidad'], aggfunc=np.max)
+
+    # Fechas
+    fecha = pd.date_range(start='1 January 2021',
+                          end='1 February 2022', freq='MS')
+    df.set_index(pd.DatetimeIndex(fecha), inplace=True)
+    formato = '%d/%m/%Y'
+    df.index.strftime(formato)
 
 
 if __name__ == "__main__":
-    Exercise_24()
+    Document_handling()

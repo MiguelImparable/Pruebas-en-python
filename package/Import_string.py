@@ -1,7 +1,6 @@
+# Un programa sobre listas importadas de Strings
 import os
 import string
-
-# Un programa sobre listas importadas de Strings
 
 
 def Import_string():

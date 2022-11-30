@@ -1,8 +1,7 @@
-import os
-import random
-
 # Un programa en el cual el usuario debera adivinar un numero de 1 a 10 para que adivine.
 # Felicitarlo si adivina o si no terminar el juego.
+import os
+import random
 
 
 def Example_random_number():

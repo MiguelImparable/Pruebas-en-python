@@ -1,6 +1,5 @@
-import os
-
 # Un programa que separe los numeros de pares o impares, la cantidad asignada por el usuario (par es 0, impar es 1).
+import os
 
 
 def While_loop():

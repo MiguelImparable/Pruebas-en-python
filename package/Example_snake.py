@@ -1,8 +1,7 @@
+# Un programa sobre jugar al SNAKE
 import os
 import random
 import readchar
-
-# Un programa sobre jugar al SNAKE
 
 
 def Example_snake():

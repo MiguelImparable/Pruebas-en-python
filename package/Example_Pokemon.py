@@ -1,7 +1,6 @@
+# Un programa sobre peleas pokemon
 import os
 import random
-
-# Un programa sobre peleas pokemon
 
 
 def Example_Pokemon():

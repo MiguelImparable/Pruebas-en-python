@@ -1,7 +1,6 @@
+# Un programa que me permita practicas LOS NP ARRAYS
 import os
 import numpy as np
-
-# Un programa que me permita practicas LOS NP ARRAYS
 
 
 def Np_arrays():

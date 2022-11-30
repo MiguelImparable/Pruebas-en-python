@@ -1,6 +1,5 @@
-import os
-
 # Un programa sobre una lista de compra
+import os
 
 
 def Example_shopping_list():

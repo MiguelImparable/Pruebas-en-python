@@ -1,7 +1,6 @@
+# Un programa que cree una lista de 10 num, la copie y la invierta para mostrar ambas en pantalla.
 import os
 import random
-
-# Un programa que cree una lista de 10 num, la copie y la invierta para mostrar ambas en pantalla.
 
 
 def List_manipulation_v1():
