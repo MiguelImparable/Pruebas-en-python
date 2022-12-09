@@ -1,0 +1,9 @@
+-- CREAR TABLES = 
+USE HolaMundo;
+TRUNCATE TABLE animales;
+TRUNCATE TABLE User;
+TRUNCATE TABLE product;
+-- VIEW TABLES =
+SELECT * FROM animales;
+SELECT * FROM User;
+SELECT * FROM product;
